@@ -16,6 +16,36 @@
       overflow-x: hidden;
     }
 
+    /* X button */
+    .x-btn {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #FF8C00;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .x-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 140, 0, 0.35);
+    }
+
+    .x-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
     /* Hero */
     .hero {
       min-height: 100vh;
@@ -241,6 +271,11 @@
   </style>
 </head>
 <body>
+
+  <a href="https://x.com/BelieveInBonk__" target="_blank" class="x-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    Follow
+  </a>
 
   <!-- Hero -->
   <section class="hero">
