@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Believe</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 140, 0, 0.06) 0%, transparent 50%);
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 900;
+      color: #FF8C00;
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: #888;
+      margin-top: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      z-index: 1;
+      animation: bounce 2s infinite;
+      color: #FF8C00;
+      font-size: 1.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* Story section */
+    .story {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .story h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #FF8C00;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      line-height: 1.3;
+    }
+
+    .story p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .story .highlight {
+      color: #FF8C00;
+      font-weight: 700;
+    }
+
+    .story .big-number {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #FF8C00;
+      background: rgba(255, 140, 0, 0.08);
+      padding: 0.1em 0.4em;
+      border-radius: 8px;
+    }
+
+    /* Divider */
+    .divider {
+      width: 60px;
+      height: 4px;
+      background: #FF8C00;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    /* Proof section */
+    .proof {
+      padding: 6rem 2rem;
+      background: #fafafa;
+    }
+
+    .proof h2 {
+      text-align: center;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #FF8C00;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .proof .subtitle {
+      text-align: center;
+      color: #888;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+
+    .proof-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .proof-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
+    }
+
+    .proof-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .proof-card .caption {
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      color: #999;
+      font-weight: 400;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .proof-card .caption span {
+      color: #FF8C00;
+      font-weight: 600;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 8rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta h2 {
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-weight: 900;
+      color: #FF8C00;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cta p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: #888;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #ccc;
+      font-size: 0.85rem;
+      font-weight: 300;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Believe.</h1>
+    <p class="tagline">The code word was always there</p>
+    <div class="scroll-hint">&darr;</div>
+  </section>
+
+  <!-- Story -->
+  <section class="story fade-in">
+    <h2>What if there was a code word hiding in plain sight?</h2>
+
+    <p>
+      Imagine there was a code word used by the Bonk team <span class="highlight">every single day</span> &mdash; but you just didn't see it.
+    </p>
+
+    <p>
+      A meme tweeted out exactly <span class="big-number">69</span> times by every founder of Bonk &mdash; but you just didn't realise it.
+    </p>
+
+    <p>
+      A meme so blatant it got put on <span class="highlight">Facebook</span> by the Bonk team &mdash; and you still chose to ignore it.
+    </p>
+
+    <div class="divider" style="margin: 3rem auto;"></div>
+
+    <p style="font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: #FF8C00; font-weight: 600; margin-top: 2rem;">
+      Introducing Believe.
+    </p>
+
+    <p>
+      The word was always there. In the tweets. In the posts. In every message they ever sent. They told you to <span class="highlight">believe</span> &mdash; over and over and over again.
+    </p>
+
+    <p>You just weren't paying attention.</p>
+  </section>
+
+  <!-- Proof -->
+  <section class="proof">
+    <h2 class="fade-in">The Proof</h2>
+    <p class="subtitle fade-in">Straight from the source. Every single one says it.</p>
+
+    <div class="proof-grid">
+
+      <div class="proof-card fade-in">
+        <img src="images/proof1.png" alt="Tweet proof 1" loading="lazy">
+        <div class="caption"><span>@SolportTom</span> &mdash; "Believe in something" &bull; Sep 2025</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof2.png" alt="Tweet proof 2" loading="lazy">
+        <div class="caption"><span>@SolportTom</span> &mdash; "marks what we <span>believe</span>" &bull; Sep 2025</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof3.png" alt="Tweet proof 3" loading="lazy">
+        <div class="caption"><span>@SolportTom</span> &mdash; "you would never <span>believe</span>" &bull; May 2025</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof4.png" alt="Tweet proof 4" loading="lazy">
+        <div class="caption"><span>@bonk_inu</span> &mdash; "Believe in something" / "believe in BONK" &bull; 2024-2025</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof5.png" alt="Tweet proof 5" loading="lazy">
+        <div class="caption"><span>@bonk_inu</span> &mdash; "Dream it. <span>Believe</span> it. Achieve it." &bull; Jun 2023</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof6.png" alt="Tweet proof 6" loading="lazy">
+        <div class="caption"><span>@bonk_inu</span> &mdash; "believe in something" tweeted <span>over and over</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta fade-in">
+    <h2>Believe.</h2>
+    <p>They told you. You just weren't listening. Now you know.</p>
+  </section>
+
+  <footer>
+    believe &bull; 2025
+  </footer>
+
+  <script>
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
