@@ -11,8 +11,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #e0e0e0;
+      background: #ffffff;
+      color: #1a1a1a;
       overflow-x: hidden;
     }
 
@@ -25,8 +25,8 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      background: #00e5ff;
-      color: #0a0a0a;
+      background: #FF8C00;
+      color: #fff;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.95rem;
@@ -37,13 +37,13 @@
 
     .x-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(0, 229, 255, 0.35);
+      box-shadow: 0 4px 20px rgba(255, 140, 0, 0.35);
     }
 
     .x-btn svg {
       width: 18px;
       height: 18px;
-      fill: #0a0a0a;
+      fill: #fff;
     }
 
     /* Hero */
@@ -65,7 +65,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
+      background: radial-gradient(circle at 50% 50%, rgba(255, 140, 0, 0.06) 0%, transparent 50%);
       animation: pulse 6s ease-in-out infinite;
     }
 
@@ -75,19 +75,18 @@
     }
 
     .hero h1 {
-      font-size: clamp(3.5rem, 11vw, 9rem);
+      font-size: clamp(4rem, 12vw, 10rem);
       font-weight: 900;
-      color: #00e5ff;
+      color: #FF8C00;
       letter-spacing: -0.03em;
       line-height: 0.9;
       position: relative;
       z-index: 1;
-      text-transform: uppercase;
     }
 
     .hero .tagline {
       font-size: clamp(1rem, 2.5vw, 1.4rem);
-      color: #666;
+      color: #888;
       margin-top: 1.5rem;
       font-weight: 300;
       letter-spacing: 0.2em;
@@ -101,7 +100,7 @@
       bottom: 2rem;
       z-index: 1;
       animation: bounce 2s infinite;
-      color: #00e5ff;
+      color: #FF8C00;
       font-size: 1.5rem;
     }
 
@@ -120,7 +119,7 @@
 
     .story h2 {
       font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: #00e5ff;
+      color: #FF8C00;
       font-weight: 700;
       margin-bottom: 2.5rem;
       line-height: 1.3;
@@ -129,13 +128,13 @@
     .story p {
       font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.9;
-      color: #999;
+      color: #444;
       margin-bottom: 1.5rem;
       font-weight: 400;
     }
 
     .story .highlight {
-      color: #00e5ff;
+      color: #FF8C00;
       font-weight: 700;
     }
 
@@ -143,8 +142,8 @@
       display: inline-block;
       font-size: 2rem;
       font-weight: 900;
-      color: #00e5ff;
-      background: rgba(0, 229, 255, 0.08);
+      color: #FF8C00;
+      background: rgba(255, 140, 0, 0.08);
       padding: 0.1em 0.4em;
       border-radius: 8px;
     }
@@ -153,135 +152,105 @@
     .divider {
       width: 60px;
       height: 4px;
-      background: #00e5ff;
+      background: #FF8C00;
       margin: 0 auto;
       border-radius: 2px;
     }
 
-    /* Manifesto section */
-    .manifesto {
+    /* Proof section */
+    .proof {
       padding: 6rem 2rem;
-      background: #111;
+      background: #fafafa;
     }
 
-    .manifesto h2 {
+    .proof h2 {
       text-align: center;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: #00e5ff;
+      color: #FF8C00;
       font-weight: 700;
       margin-bottom: 1rem;
     }
 
-    .manifesto .subtitle {
+    .proof .subtitle {
       text-align: center;
-      color: #666;
+      color: #888;
       font-size: 1.1rem;
       margin-bottom: 3rem;
       font-weight: 300;
     }
 
-    .manifesto-grid {
-      max-width: 1100px;
+    .proof-links {
+      max-width: 800px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      flex-direction: column;
       gap: 1.5rem;
     }
 
-    .manifesto-card {
-      background: #1a1a1a;
+    .proof-link {
+      background: #fff;
       border-radius: 16px;
       padding: 2rem;
-      border: 1px solid #222;
+      border: 1px solid #eee;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
-    .manifesto-card:hover {
+    .proof-link:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 229, 255, 0.08);
-      border-color: rgba(0, 229, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
     }
 
-    .manifesto-card .icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .manifesto-card h3 {
-      font-size: 1.3rem;
-      color: #00e5ff;
+    .proof-link .label {
+      font-size: 0.8rem;
+      color: #FF8C00;
       font-weight: 700;
-      margin-bottom: 0.8rem;
-    }
-
-    .manifesto-card p {
-      color: #888;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      font-weight: 400;
-    }
-
-    /* Stats bar */
-    .stats {
-      padding: 4rem 2rem;
-      background: #0a0a0a;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-
-    .stats-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat .number {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 900;
-      color: #00e5ff;
-      letter-spacing: -0.02em;
-    }
-
-    .stat .label {
-      font-size: 0.85rem;
-      color: #666;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-top: 0.3rem;
-      font-weight: 400;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
     }
 
-    /* Thesis section */
-    .thesis {
+    .proof-link .desc {
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .proof-link .url {
+      font-size: 0.85rem;
+      color: #999;
+      word-break: break-all;
+    }
+
+    /* Mission section */
+    .mission {
       max-width: 800px;
       margin: 0 auto;
       padding: 6rem 2rem;
       text-align: center;
     }
 
-    .thesis h2 {
+    .mission h2 {
       font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: #00e5ff;
+      color: #FF8C00;
       font-weight: 700;
       margin-bottom: 2.5rem;
+      line-height: 1.3;
     }
 
-    .thesis p {
-      font-size: clamp(1rem, 2vw, 1.15rem);
+    .mission p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.9;
-      color: #999;
+      color: #444;
       margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
-    .thesis .highlight {
-      color: #00e5ff;
+    .mission .highlight {
+      color: #FF8C00;
       font-weight: 700;
     }
 
@@ -292,43 +261,28 @@
       position: relative;
     }
 
-    .cta::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.04) 0%, transparent 60%);
-    }
-
     .cta h2 {
       font-size: clamp(2.5rem, 8vw, 6rem);
       font-weight: 900;
-      color: #00e5ff;
+      color: #FF8C00;
       margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
-      text-transform: uppercase;
-      position: relative;
-      z-index: 1;
     }
 
     .cta p {
       font-size: clamp(1rem, 2vw, 1.3rem);
-      color: #666;
+      color: #888;
       max-width: 500px;
       margin: 0 auto;
       line-height: 1.7;
       font-weight: 300;
-      position: relative;
-      z-index: 1;
     }
 
     /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
-      color: #333;
+      color: #ccc;
       font-size: 0.85rem;
       font-weight: 300;
     }
@@ -345,160 +299,99 @@
       transform: translateY(0);
     }
 
-    /* Glow text effect */
-    .glow {
-      text-shadow: 0 0 40px rgba(0, 229, 255, 0.3), 0 0 80px rgba(0, 229, 255, 0.1);
-    }
-
     @media (max-width: 600px) {
-      .manifesto-grid {
-        grid-template-columns: 1fr;
-      }
-      .stats-inner {
-        flex-direction: column;
-        align-items: center;
+      .proof-links {
+        gap: 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <a href="https://x.com/" target="_blank" class="x-btn">
+  <a href="https://x.com/AttentionBonk" target="_blank" class="x-btn">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     Follow
   </a>
 
   <!-- Hero -->
   <section class="hero">
-    <h1 class="glow">Attention.</h1>
-    <p class="tagline">The only currency that matters</p>
+    <h1>Attention.</h1>
+    <p class="tagline">The code word was always there</p>
     <div class="scroll-hint">&darr;</div>
   </section>
 
   <!-- Story -->
   <section class="story fade-in">
-    <h2>Everything you see is a war for your eyes.</h2>
+    <h2>What if there was a code word hiding in plain sight?</h2>
 
     <p>
-      Every token, every thread, every narrative &mdash; it's all competing for the same thing: <span class="highlight">your attention</span>.
+      For the last year, <span class="highlight">@bonkfun</span> &amp; <span class="highlight">@SolportTom</span> have tweeted out "attention" more than <span class="big-number">1,000</span> times.
     </p>
 
     <p>
-      The feeds are infinite. The content never stops. There are <span class="big-number">&infin;</span> things screaming for you to look &mdash; but you only have two eyes.
+      A word repeated <span class="highlight">every single day</span> &mdash; in tweets, in replies, in posts &mdash; but you just didn't see it.
     </p>
 
     <p>
-      Markets don't move on fundamentals. They don't move on tech. They move when <span class="highlight">enough people look at the same thing at the same time</span>.
+      They were telling you exactly what the next play was. Over and over and over again. They said <span class="highlight">"attention"</span> &mdash; and you still chose to ignore it.
     </p>
 
     <div class="divider" style="margin: 3rem auto;"></div>
 
-    <p style="font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: #00e5ff; font-weight: 600; margin-top: 2rem;">
-      Attention is the asset. Everything else is noise.
+    <p style="font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: #FF8C00; font-weight: 600; margin-top: 2rem;">
+      Introducing Attention.
     </p>
 
     <p>
-      The ones who win aren't smarter. They aren't earlier. They're just better at <span class="highlight">capturing attention</span> &mdash; and directing it.
+      The word was always there. In the tweets. In the posts. In every message they ever sent. They told you to pay <span class="highlight">attention</span> &mdash; over and over and over again.
     </p>
 
-    <p>You already knew this. You just weren't paying attention.</p>
+    <p>You just weren't paying attention.</p>
   </section>
 
-  <!-- Stats -->
-  <section class="stats fade-in">
-    <div class="stats-inner">
-      <div class="stat">
-        <div class="number">8s</div>
-        <div class="label">Average attention span</div>
-      </div>
-      <div class="stat">
-        <div class="number">$0</div>
-        <div class="label">Cost to capture it</div>
-      </div>
-      <div class="stat">
-        <div class="number">&infin;</div>
-        <div class="label">Value when you do</div>
-      </div>
-    </div>
-  </section>
+  <!-- Proof -->
+  <section class="proof">
+    <h2 class="fade-in">The Proof</h2>
+    <p class="subtitle fade-in">Don't take our word for it. See for yourself.</p>
 
-  <!-- Manifesto -->
-  <section class="manifesto">
-    <h2 class="fade-in">The Thesis</h2>
-    <p class="subtitle fade-in">Why attention is the only metric.</p>
+    <div class="proof-links">
 
-    <div class="manifesto-grid">
+      <a href="https://x.com/search?q=from%3Abonkfun%20attention&src=typed_query" target="_blank" class="proof-link fade-in">
+        <div class="label">Evidence 1 &mdash; Search Results</div>
+        <div class="desc">Every time @bonkfun tweeted "attention"</div>
+        <div class="url">x.com/search?q=from:bonkfun attention</div>
+      </a>
 
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x1f441;</div>
-        <h3>Eyeballs = Value</h3>
-        <p>Every protocol, every token, every project is fundamentally a vehicle for attention. The ones that capture the most eyes win. Everything else is downstream.</p>
-      </div>
-
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x26a1;</div>
-        <h3>Speed Kills</h3>
-        <p>Attention moves at the speed of a scroll. You have milliseconds to capture it, seconds to hold it, and minutes before it moves to the next thing. The fast eat the slow.</p>
-      </div>
-
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x1f4a1;</div>
-        <h3>Narratives Are Weapons</h3>
-        <p>A good narrative is an attention magnet. It gives people something to believe in, something to repeat, something to spread. Narratives are how attention compounds.</p>
-      </div>
-
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x1f30a;</div>
-        <h3>Virality Is The Moat</h3>
-        <p>You can't buy sustained attention. You earn it through content that people can't help but share. Virality is the only defensible advantage in the attention economy.</p>
-      </div>
-
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x1f3af;</div>
-        <h3>Focus Is Alpha</h3>
-        <p>Everyone's attention is scattered. The edge goes to those who can focus theirs &mdash; and direct others'. Concentrated attention is the most powerful force in markets.</p>
-      </div>
-
-      <div class="manifesto-card fade-in">
-        <div class="icon">&#x1f525;</div>
-        <h3>Memes > Metrics</h3>
-        <p>A meme that captures attention is worth more than a whitepaper nobody reads. In the attention economy, what spreads wins. What doesn't spread dies.</p>
-      </div>
+      <a href="https://x.com/SolportTom/status/1974542996009099454" target="_blank" class="proof-link fade-in">
+        <div class="label">Evidence 2 &mdash; @SolportTom</div>
+        <div class="desc">The tweet that started it all</div>
+        <div class="url">x.com/SolportTom/status/1974542996009099454</div>
+      </a>
 
     </div>
   </section>
 
-  <!-- Thesis deep dive -->
-  <section class="thesis fade-in">
-    <h2>The Attention Cycle</h2>
+  <!-- Mission -->
+  <section class="mission fade-in">
+    <h2>The Mission</h2>
 
     <p>
-      First comes the <span class="highlight">spark</span> &mdash; a tweet, a meme, a screenshot that makes you stop scrolling.
+      This idea is just as big as <span class="highlight">Useless</span>. The code word was right there &mdash; they told you a thousand times.
     </p>
 
     <p>
-      Then comes the <span class="highlight">cascade</span> &mdash; retweets, quote tweets, threads, everyone trying to be the one who explains it best.
+      So we went all in. Over <span class="highlight">$1,000 in ads</span> on TikTok and X. Real money. Real conviction. Real attention.
     </p>
 
     <p>
-      Then comes the <span class="highlight">FOMO</span> &mdash; the chart goes up because people are looking, and people look because the chart goes up.
-    </p>
-
-    <p>
-      Then comes the <span class="highlight">shift</span> &mdash; attention moves to the next thing. Always. Without exception.
-    </p>
-
-    <div class="divider" style="margin: 3rem auto;"></div>
-
-    <p style="margin-top: 2rem;">
-      The game isn't picking what to pay attention to. The game is <span class="highlight">understanding that attention itself is the trade</span>.
+      The goal is simple: <span class="highlight">capture everyone's attention</span>. That's what this project is about. That's what it was always about.
     </p>
   </section>
 
   <!-- CTA -->
   <section class="cta fade-in">
-    <h2 class="glow">Pay Attention.</h2>
-    <p>The market is always telling you where the eyes are going next. Are you watching?</p>
+    <h2>Attention.</h2>
+    <p>They told you. You just weren't listening. Now you know.</p>
   </section>
 
   <footer>
