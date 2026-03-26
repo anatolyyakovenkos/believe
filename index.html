@@ -179,50 +179,43 @@
       font-weight: 300;
     }
 
-    .proof-links {
-      max-width: 800px;
+    .proof-grid {
+      max-width: 1100px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.5rem;
     }
 
-    .proof-link {
+    .proof-card {
       background: #fff;
       border-radius: 16px;
-      padding: 2rem;
+      overflow: hidden;
       border: 1px solid #eee;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
     }
 
-    .proof-link:hover {
+    .proof-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(255, 140, 0, 0.1);
     }
 
-    .proof-link .label {
-      font-size: 0.8rem;
-      color: #FF8C00;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
+    .proof-card img {
+      width: 100%;
+      display: block;
     }
 
-    .proof-link .desc {
-      font-size: 1.1rem;
-      color: #333;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .proof-link .url {
+    .proof-card .caption {
+      padding: 1rem 1.2rem;
       font-size: 0.85rem;
       color: #999;
-      word-break: break-all;
+      font-weight: 400;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .proof-card .caption span {
+      color: #FF8C00;
+      font-weight: 600;
     }
 
     /* Mission section */
@@ -300,8 +293,8 @@
     }
 
     @media (max-width: 600px) {
-      .proof-links {
-        gap: 1rem;
+      .proof-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -354,19 +347,37 @@
     <h2 class="fade-in">The Proof</h2>
     <p class="subtitle fade-in">Don't take our word for it. See for yourself.</p>
 
-    <div class="proof-links">
+    <div class="proof-grid">
 
-      <a href="https://x.com/search?q=from%3Abonkfun%20attention&src=typed_query" target="_blank" class="proof-link fade-in">
-        <div class="label">Evidence 1 &mdash; Search Results</div>
-        <div class="desc">Every time @bonkfun tweeted "attention"</div>
-        <div class="url">x.com/search?q=from:bonkfun attention</div>
-      </a>
+      <div class="proof-card fade-in">
+        <img src="images/proof1.png" alt="Tweet proof 1" loading="lazy">
+        <div class="caption"><span>@bonkfun</span> &mdash; "attention" tweeted over and over</div>
+      </div>
 
-      <a href="https://x.com/SolportTom/status/1974542996009099454" target="_blank" class="proof-link fade-in">
-        <div class="label">Evidence 2 &mdash; @SolportTom</div>
-        <div class="desc">The tweet that started it all</div>
-        <div class="url">x.com/SolportTom/status/1974542996009099454</div>
-      </a>
+      <div class="proof-card fade-in">
+        <img src="images/proof2.png" alt="Tweet proof 2" loading="lazy">
+        <div class="caption"><span>@SolportTom</span> &mdash; "pay <span>attention</span>"</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof3.png" alt="Tweet proof 3" loading="lazy">
+        <div class="caption"><span>@bonkfun</span> &mdash; "your <span>attention</span> is everything"</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof4.png" alt="Tweet proof 4" loading="lazy">
+        <div class="caption"><span>@SolportTom</span> &mdash; "<span>attention</span>" repeated daily</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof5.png" alt="Tweet proof 5" loading="lazy">
+        <div class="caption"><span>@bonkfun</span> &mdash; "all you need is <span>attention</span>"</div>
+      </div>
+
+      <div class="proof-card fade-in">
+        <img src="images/proof6.png" alt="Tweet proof 6" loading="lazy">
+        <div class="caption"><span>@bonkfun</span> &mdash; "attention" tweeted <span>over 1,000 times</span></div>
+      </div>
 
     </div>
   </section>
